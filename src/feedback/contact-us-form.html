@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product Suggestion Form</title>
+    <link rel="stylesheet" href="../styles/css/form.css" type="text/css">
+  </head>
+  <body onload="document.form1.user_name.focus()">
+    <div class="prodcut-suggestion-form">
+        <form name="form1" class="" action="index.html" method="post">
+          <h1>Contact Us Form</h1>
+          <p>Please enter your information</p>
+          <div class="form-info">
+              <label for="user_name_label">Name:<span id="user_name_error" /></label>
+               <input type="text" name="user_name" value="">
+              <label for="user-email">Email address:<span id="user_email_error" /></label>
+              <input type="text" name="user_email" value="">
+          </div>
+          <p class="form-prompt">Please select one of the followig reason why you contact us today.</p>
+          <div class="form-info input-size">
+              <label for="order-question"><input type="radio" name="reason" value="0">Order question</label>
+              <label for="website-feedback"><input type="radio" name="reason" value="1">Website feedback</label>
+              <label for="trouble-finding-product"><input type="radio" name="reason" value="2">Trouble finding product</label>
+              <label for="feedback"><input type="radio" name="reason" value="3">Feedback</label>
+          </div>
+          <div class="form-info">
+              <textarea style={{display: none}} class="3 feedback-textarea" name="feedback-textarea" rows="8" cols="80"></textarea>
+          </div>
+          <div class="btn-block">
+            <button type="button" href="/" name="submit" onclick="ValidateEmail(document.form1)">Next Feedback</button>
+          </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="../js/email-validation.js"/>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('input[type="radio"]').onclick(function(){
+          const inputValue = $(this).attr("value");
+          console.log("inputValue: ", inputValue);
+          const targer = $("." + inputValue)
+          $(".feedback-textarea").not(target).hide();
+          $(target).show();
+          alrt("Radiob button " + inputValue + " is selected");
+        })
+      })
+    </script>
+
+  </body>
+</html>
