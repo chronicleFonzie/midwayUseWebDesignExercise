@@ -15,14 +15,7 @@ h1 {
   font-weight: 400;
 }
 
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
-
-.home-content {
+.convert-time-to-words-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,19 +25,8 @@ p {
   width: 100%;
 }
 
-.home-btn-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.btn-block {
-    margin-top: 20px;
-    text-align: center;
-}
-
 button {
-  width: 150px;
+  width: 100px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -57,3 +39,9 @@ button {
 button:hover {
   background-color: #0666a3;
 }
+/*
+.convert-time-to-words-input-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+} */

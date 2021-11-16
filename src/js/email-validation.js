@@ -1,6 +1,5 @@
 function ValidateEmail(form) {
   const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  console.log(form);
   const userEmail = form.user_email;
   const userName = form.user_name;
   const reason = form.reason;

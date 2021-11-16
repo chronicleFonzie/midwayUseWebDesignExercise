@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Product Suggestion Form</title>
+    <link rel="stylesheet" href="../styles/css/convert-time-to-words.css">
+  </head>
+  <body>
+    <div class="convert-time-to-words-content">
+        <h1>Please click one of the options</h1>
+        <div class="convert-time-to-words-input-content">
+          <label for="hour">hour</label>
+          <input type="text" id="hour" name="hour" maxlength="2" size="4" value="">
+          <label for="minute">minute</label>
+           <input type="text" id="minute" name="minute" maxlength="2" size="4" value="">
+           <button type="button" name="submit" onclick="ConvertTimeToWords(document.getElementById('hour'), document.getElementById('minute'))">submit</button>
+        </div>
+        <h2 >Results: <span id=results></span> </h2>
+      </div>
+      <script type="text/javascript" src="../js/convert-time-to-words.js"></script>
+      <script type="text/javascript" src="../../node_modules/number-to-words/numberToWords.min.js"></script>
+  </body>
+</html>
